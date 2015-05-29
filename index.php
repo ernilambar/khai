@@ -7,7 +7,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
   <header>
     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -18,8 +18,11 @@
 
     <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php the_title( sprintf( '<h2><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-      <?php the_content(); ?>
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <?php the_title( sprintf( '<h2><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+        <?php the_content(); ?>
+        <?php wp_link_pages(); ?>
+      </article>
 
     <?php endwhile; ?>
 
@@ -31,6 +34,22 @@
 
   <?php endif; ?>
 
+<?php
+  if ( is_singular() )
+  {
+    post_password_required() || comments_template();
+    get_option( 'thread_comments' )
+    and comments_open( get_the_ID() )
+    and wp_enqueue_script( 'comment-reply' );
+    previous_post_link();
+    next_post_link();
+  }
+  else
+  {
+    previous_posts_link();
+    next_posts_link();
+  }
+?>
 
 <?php wp_footer(); ?>
 </body>
