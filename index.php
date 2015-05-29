@@ -17,6 +17,7 @@
       </article>
 
       <?php if ( is_singular() ) : ?>
+        <?php wp_enqueue_script( 'comment-reply' ); ?>
         <?php comments_template(); ?>
       <?php endif; ?>
 
