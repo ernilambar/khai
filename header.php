@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+/**
+ * The Header for our theme.
+ *
+ * @package Simplimum
+ */
+
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -11,5 +18,5 @@
 
   <header>
     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-    <h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
+    <p class="site-description"><?php bloginfo( 'description' ); ?></p>
   </header>
