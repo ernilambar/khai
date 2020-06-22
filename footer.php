@@ -1,6 +1,6 @@
 <?php
 /**
- * The Footer for our theme.
+ * The footer for our theme
  *
  * @package Simplimum
  */

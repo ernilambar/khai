@@ -1,6 +1,6 @@
 <?php
 /**
- * The Header for our theme.
+ * The header for our theme
  *
  * @package Simplimum
  */
@@ -15,8 +15,9 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 
-  <header>
-    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-    <p class="site-description"><?php bloginfo( 'description' ); ?></p>
-  </header>
+	<header>
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+	</header>
