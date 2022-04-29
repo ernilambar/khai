@@ -2,7 +2,7 @@
 /**
  * The template for displaying comments
  *
- * @package Simplimum
+ * @package Khai
  */
 
 ?>

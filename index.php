@@ -2,7 +2,7 @@
 /**
  * The main template file
  *
- * @package Simplimum
+ * @package Khai
  */
 
 get_header(); ?>
@@ -24,7 +24,7 @@ get_header(); ?>
 					<?php if ( ! is_singular() ) : ?>
 						<?php the_post_thumbnail(); ?>
 					<?php else : ?>
-						<?php the_post_thumbnail( 'full' ); ?>
+						<?php the_post_thumbnail( 'large' ); ?>
 					<?php endif ?>
 				<?php endif; ?>
 

@@ -2,7 +2,7 @@
 /**
  * Theme functions
  *
- * @package Simplimum
+ * @package Khai
  */
 
 /**
@@ -10,11 +10,11 @@
  *
  * @since 1.0.0
  */
-function simplimum_planet_scripts() {
+function khai_planet_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'simplimum_planet_scripts' );
+add_action( 'wp_enqueue_scripts', 'khai_planet_scripts' );
 

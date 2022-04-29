@@ -2,7 +2,7 @@
 /**
  * The header for our theme
  *
- * @package Simplimum
+ * @package Khai
  */
 
 ?><!DOCTYPE html>
