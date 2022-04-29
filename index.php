@@ -37,7 +37,9 @@ get_header(); ?>
 			</article>
 
 			<?php if ( is_singular() ) : ?>
-				<?php the_post_navigation(); ?>
+        <?php if ( ! is_singular( 'page' ) ) : ?>
+          <?php the_post_navigation(); ?>
+        <?php endif; ?>
 				<?php comments_template(); ?>
 			<?php endif; ?>
 		<?php endwhile; ?>
@@ -48,6 +50,6 @@ get_header(); ?>
 
 	<?php endif; ?>
 
-	<?php the_posts_navigation(); ?>
+	<?php the_posts_pagination(); ?>
 
 <?php get_footer(); ?>
