@@ -1,8 +1,8 @@
 <?php
 /**
- * Sidebar.
+ * Sidebar
  *
- * @package Simplimum
+ * @package Khai
  */
 
 ?><?php

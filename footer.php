@@ -2,7 +2,7 @@
 /**
  * The footer for our theme
  *
- * @package Simplimum
+ * @package Khai
  */
 
 ?>
