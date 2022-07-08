@@ -52,4 +52,5 @@ get_header(); ?>
 
 	<?php the_posts_pagination(); ?>
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
