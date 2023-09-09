@@ -23,7 +23,7 @@ get_header();
 				<?php endif; ?>
 
         <?php if ( 'post'=== get_post_type() ) : ?>
-          <p><span class="post-date"><a href="<?php echo esc_url( get_day_link( get_post_time( 'Y' ), get_post_time( 'm' ), get_post_time( 'j' ) ) ); ?>"><?php the_date( get_option( 'date_format' ) ); ?></a></span>&nbsp;|&nbsp;<span class="post-author"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )?>"><?php the_author(); ?></a></span></p>
+          <p><span class="post-date"><a href="<?php echo esc_url( get_day_link( get_post_time( 'Y' ), get_post_time( 'm' ), get_post_time( 'j' ) ) ); ?>"><?php the_date( get_option( 'date_format' ) ); ?></a></span>&nbsp;|&nbsp;<span class="post-author"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></span></p>
         <?php endif; ?>
 
 				<?php if ( has_post_thumbnail() ) : ?>
